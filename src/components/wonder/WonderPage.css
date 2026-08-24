@@ -1,0 +1,35 @@
+.won-page {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 18px; padding: 16px;
+  position: relative; z-index: 1; overflow: hidden;
+}
+.won-mascot-row { display: flex; align-items: center; gap: 14px; }
+.won-avatar {
+  width: 52px; height: 52px; background: var(--amber); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.65rem; box-shadow: 0 0 20px rgba(245,166,35,.5); flex-shrink: 0;
+}
+.won-bubble {
+  background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.15);
+  border-radius: var(--r-pill); padding: 8px 18px;
+  font-size: var(--fs-base); font-weight: 700; color: #e2d9f3;
+}
+.won-card {
+  max-width: 460px; width: 100%; padding: 32px 36px;
+  display: flex; flex-direction: column; align-items: center;
+  gap: 14px; text-align: center;
+}
+.won-icon {
+  width: 68px; height: 68px; background: #6d28d9; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; box-shadow: 0 0 18px rgba(109,40,217,.5);
+}
+.won-q    { font-size: var(--fs-xl); font-weight: 800; color: #fff; line-height: 1.5; }
+.won-hint { font-size: var(--fs-sm); font-style: italic; color: var(--muted); }
+.won-clue {
+  width: 100%; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--r-md); padding: 11px 18px;
+  font-size: var(--fs-md); font-weight: 700; color: var(--amber);
+}
+.won-cta { margin-top: 4px; font-size: var(--fs-lg); padding: 13px 42px; }

@@ -1,0 +1,73 @@
+.match-pairs { display: flex; flex-direction: column; gap: var(--sp-5); }
+
+.match-columns {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: stretch;
+}
+
+.match-col { flex: 1; display: flex; flex-direction: column; gap: var(--sp-3); }
+.match-col--left  { align-items: flex-end; }
+.match-col--right { align-items: flex-start; }
+
+.match-connector {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.connector-line {
+  width: 2px;
+  height: 18px;
+  background: var(--border);
+  border-radius: 1px;
+  transition: background var(--ease-fast);
+}
+.connector-line.active { background: var(--c-success); box-shadow: 0 0 6px var(--c-success); }
+
+.match-card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--border-radius);
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid var(--border);
+  color: var(--text-primary);
+  font-family: var(--font);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  transition: all var(--ease-fast);
+  min-height: var(--tap-min);
+  cursor: pointer;
+  width: 100%;
+}
+
+.match-card:hover:not(:disabled) {
+  background: rgba(124,58,237,0.1);
+  border-color: var(--c-primary);
+}
+
+.match-card--selected { background: rgba(124,58,237,0.18) !important; border-color: var(--c-primary) !important; box-shadow: var(--glow-violet); }
+.match-card--matched  { background: var(--c-success-bg) !important; border-color: var(--c-success) !important; opacity: 0.85; }
+.match-card--wrong    { background: var(--c-error-bg) !important; border-color: var(--c-error) !important; }
+
+.match-value { flex: 1; }
+.match-tick  { flex-shrink: 0; }
+
+.match-done {
+  padding: var(--sp-4);
+  background: var(--c-success-bg);
+  border: 1px solid rgba(16,185,129,0.3);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--c-success);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .match-card { font-size: var(--fs-base); padding: var(--sp-2) var(--sp-3); }
+}

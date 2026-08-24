@@ -1,0 +1,106 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-topbar);
+  background: rgba(15, 10, 30, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--sp-6);
+  height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+}
+
+/* Brand */
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-shrink: 0;
+}
+
+.topbar-logo {
+  font-size: 2rem;
+  line-height: 1;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(245,158,11,0.5));
+}
+
+.topbar-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.1;
+}
+
+.topbar-subject {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--c-primary-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.topbar-title {
+  font-size: var(--fs-lg);
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Stats */
+.topbar-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: var(--border-radius-full);
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  transition: all var(--ease-fast);
+}
+
+.stat-badge--fire  { border-color: rgba(239,68,68,0.4); color: #FCA5A5; background: rgba(239,68,68,0.12); }
+.stat-badge--stars { border-color: rgba(245,158,11,0.4); color: var(--c-accent-light); }
+.stat-badge--level { border-color: var(--border-violet); color: var(--c-primary-light); }
+
+.audio-toggle {
+  width: var(--tap-min);
+  height: var(--tap-min);
+  border-radius: var(--border-radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-bright);
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--ease-fast);
+  flex-shrink: 0;
+}
+
+.audio-toggle:hover { background: var(--bg-card-hover); transform: scale(1.1); }
+.audio-toggle.off   { opacity: 0.45; }
+
+@media (max-width: 640px) {
+  .topbar-inner { padding: 0 var(--sp-4); }
+  .topbar-subject { display: none; }
+  .topbar-title { font-size: var(--fs-md); }
+  .stat-badge--level { display: none; }
+}

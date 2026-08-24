@@ -1,0 +1,16 @@
+.star-burst {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: var(--z-toast);
+}
+
+.burst-star {
+  position: absolute;
+  font-size: 1.4rem;
+  animation: starBurstOut 1s ease forwards;
+  animation-delay: var(--delay, 0s);
+}

@@ -1,0 +1,39 @@
+.pvblock {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  transition: transform var(--ease-fast), filter var(--ease-fast);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pvblock:active { transform: scale(0.92); }
+
+.pvblock svg { display: block; }
+
+.pvblock--hundred { width: 60px; }
+.pvblock--hundred svg { width: 60px; height: 60px; }
+.pvblock--ten { width: 16px; }
+.pvblock--ten svg { width: 16px; height: 60px; }
+.pvblock--one { width: 22px; }
+.pvblock--one svg { width: 22px; height: 22px; }
+
+.pvblock-cell--hundred { fill: #818CF8; stroke: #6366F1; stroke-width: 0.4; }
+.pvblock-cell--ten     { fill: #6EE7B7; stroke: #10B981; stroke-width: 0.4; }
+.pvblock-cell--one     { fill: #FCD34D; stroke: #F59E0B; stroke-width: 1; }
+
+.pvblock:hover .pvblock-cell--hundred { fill: #A78BFA; }
+.pvblock:hover .pvblock-cell--ten     { fill: #A7F3D0; }
+.pvblock:hover .pvblock-cell--one     { fill: #FDE68A; }
+
+.pvblock-label {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-muted);
+  background: rgba(0,0,0,0.35);
+  padding: 1px 4px;
+  border-radius: 4px;
+  line-height: 1;
+}

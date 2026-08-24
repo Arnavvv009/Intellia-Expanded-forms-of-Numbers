@@ -1,0 +1,14 @@
+.star-field {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  animation: twinkle var(--tw-dur, 3s) ease-in-out infinite var(--tw-delay, 0s);
+}

@@ -1,0 +1,20 @@
+.audio-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: var(--z-toast);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #3d2080;
+  border: 2px solid rgba(255,255,255,0.2);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  transition: all var(--t-fast);
+  cursor: pointer;
+}
+.audio-fab:hover { background: #4a2898; transform: scale(1.1); }
+.audio-fab.off   { opacity: 0.5; }

@@ -1,0 +1,187 @@
+.btb-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.btb-target {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  background: rgba(124,58,237,0.1);
+  border-radius: var(--border-radius);
+  padding: var(--sp-4) var(--sp-6);
+  border: 2px solid rgba(124,58,237,0.4);
+  justify-content: center;
+}
+
+.btb-target-label {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.btb-target-number {
+  font-size: var(--fs-4xl);
+  font-weight: 900;
+  color: var(--text-primary);
+  text-shadow: 0 0 24px rgba(124,58,237,0.5);
+}
+
+/* Zones */
+.btb-zones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--sp-4);
+}
+
+.btb-zone {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--border-radius);
+  padding: var(--sp-4);
+  border: 2px dashed var(--border);
+  min-height: 155px;
+  transition: border-color var(--ease-fast);
+}
+
+.btb-zone--hundreds { border-color: rgba(99,102,241,0.45); }
+.btb-zone--tens     { border-color: rgba(16,185,129,0.45); }
+.btb-zone--ones     { border-color: rgba(245,158,11,0.45); }
+
+.zone-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.zone-emoji { font-size: 1.15rem; }
+.zone-label {
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex: 1;
+}
+.zone-value { font-size: var(--fs-xl); font-weight: 800; color: var(--text-primary); }
+
+.zone-label.text-hundreds { color: #818CF8; }
+.zone-label.text-tens     { color: #6EE7B7; }
+.zone-label.text-ones     { color: #FCD34D; }
+
+.zone-blocks {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  align-content: flex-start;
+  min-height: 64px;
+}
+
+.zone-empty {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  font-style: italic;
+  align-self: center;
+  width: 100%;
+  text-align: center;
+}
+
+.zone-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  justify-content: center;
+}
+
+.zone-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--border-radius-full);
+  font-size: 1.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--ease-fast);
+}
+
+.zone-btn--add {
+  background: var(--c-success-bg);
+  color: var(--c-success);
+  border: 1px solid var(--c-success);
+}
+.zone-btn--add:hover:not(:disabled) { background: rgba(16,185,129,0.3); transform: scale(1.12); }
+
+.zone-btn--remove {
+  background: var(--c-error-bg);
+  color: var(--c-error);
+  border: 1px solid var(--c-error);
+}
+.zone-btn--remove:hover:not(:disabled) { background: rgba(239,68,68,0.3); transform: scale(1.12); }
+
+.zone-btn:disabled { opacity: 0.3; cursor: not-allowed; transform: none; }
+
+.zone-count {
+  font-size: var(--fs-xl);
+  font-weight: 900;
+  color: var(--text-primary);
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Total */
+.btb-total {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  justify-content: center;
+}
+
+.btb-total-label {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.btb-total-value {
+  font-size: var(--fs-3xl);
+  font-weight: 900;
+  color: var(--text-primary);
+  transition: color var(--ease-fast);
+}
+.btb-total-value.text-success { color: var(--c-success); }
+
+/* Strip toggle */
+.btb-strip {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  align-items: center;
+}
+.toggle-btn { font-size: var(--fs-sm); }
+
+/* Feedback */
+.btb-feedback {
+  padding: var(--sp-4);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  text-align: center;
+}
+.btb-feedback--correct  { background: var(--c-success-bg); border: 1px solid rgba(16,185,129,0.3); color: var(--c-success); }
+.btb-feedback--incorrect{ background: var(--c-error-bg); border: 1px solid rgba(239,68,68,0.3); color: var(--c-error); }
+
+/* Actions */
+.btb-actions {
+  display: flex;
+  gap: var(--sp-4);
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .btb-zones { grid-template-columns: 1fr; gap: var(--sp-3); }
+  .btb-zone  { min-height: auto; }
+  .zone-blocks { min-height: 48px; }
+}

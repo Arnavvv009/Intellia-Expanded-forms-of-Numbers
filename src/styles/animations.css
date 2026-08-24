@@ -1,0 +1,7 @@
+/* Reuse keyframes already defined in theme.css — helpers only */
+.anim-fade-in    { animation: fadeIn    .35s ease both }
+.anim-fade-in-up { animation: fadeInUp  .4s  ease both }
+.anim-bounce-in  { animation: bounceIn  .45s ease both }
+.anim-shake      { animation: shake     .4s  ease }
+.anim-float      { animation: floatY    3.5s ease-in-out infinite }
+.anim-spin       { animation: spin      1s   linear infinite }
